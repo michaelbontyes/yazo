@@ -114,9 +114,18 @@ add_action( 'widgets_init', 'theme_widgets_init' );
 function theme_scripts() {
 	wp_enqueue_style( 'theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
 	wp_enqueue_script( 'theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	
+	// Add Material scripts and styles
+	if( !is_admin()){
+		
+		wp_deregister_script('jquery');
+		wp_enqueue_script( 'material-jquery', 'http://code.jquery.com/jquery-2.1.3.min.js', array(), '1.0', false );
+	
+	}
+	wp_enqueue_style( 'material-style', get_template_directory_uri() . '/css/materialize.css' );
+	wp_enqueue_script( 'material-script', get_template_directory_uri() . '/js/materialize.js', array(), '1.0', false );	
+	wp_enqueue_script( 'material-custom', get_template_directory_uri() . '/js/material-custom-scripts.js', array(), '1.0', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -148,3 +157,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
