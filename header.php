@@ -16,31 +16,48 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-</head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'theme' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
 
-		<div class="m-container nav">
-        	<div class="container">
-        		<nav id="site-navigation" class="main-navigation" role="navigation">
-        			<a href="#" data-activates="mobile-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-         
-        			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'menu side-nav', 'menu_id' => 'mobile-nav','items_wrap' => '<ul id="%1$s" class="%2$s"><li class="mobile-header"><p>Menu</p></li>%3$s</ul><div class="clear"></div>', ) ); ?>
-        					
-        			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'hide-on-med-and-down' ) ); ?>
-         
-        		</nav><!-- #site-navigation -->
-        	<div class="clear"></div>
+        <nav class="desktop-navigation teal" role="navigation">
+            <div class="nav-wrapper container">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="#">Navbar Link</a></li>
+              </ul>
+        
+              <ul id="nav-mobile" class="side-nav teal">
+                <li><a href="#">Navbar Link</a></li>
+                <li><a href="#">Navbar Link</a></li>
+                <li><a href="#">Navbar Link</a></li>
+                <li><a href="#">Navbar Link</a></li>
+                <li><a href="#">Navbar Link</a></li>
+              </ul>
+              <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
+          </nav>
         </div>
 	</header><!-- #masthead -->
+      <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+        <br><br>
 
+      </div>
+    </div>
+    <div class="parallax"><img src="http://materializecss.com/images/parallax2.jpg" alt="Unsplashed background img 1"></div>
+  </div>
 	<div id="content" class="site-content">
 	    <div class="container">

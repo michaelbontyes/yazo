@@ -123,9 +123,11 @@ function theme_scripts() {
 		wp_enqueue_script( 'material-jquery', 'http://code.jquery.com/jquery-2.1.3.min.js', array(), '1.0', false );
 	
 	}
-	wp_enqueue_style( 'material-style', get_template_directory_uri() . '/css/materialize.css' );
-	wp_enqueue_script( 'material-script', get_template_directory_uri() . '/js/materialize.js', array(), '1.0', false );	
-	wp_enqueue_script( 'material-custom', get_template_directory_uri() . '/js/material-custom-scripts.js', array(), '1.0', false );
+	wp_enqueue_style( 'material-style', get_template_directory_uri() . '/css/materialize.min.css' );
+	wp_enqueue_style( 'material-theme-style', get_template_directory_uri() . '/css/materialize.theme.css' );
+	wp_enqueue_script( 'masonry-script', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '1.0', false );	
+	wp_enqueue_script( 'material-script', get_template_directory_uri() . '/js/materialize.min.js', array(), '1.0', false );	
+	wp_enqueue_script( 'material-theme-script', get_template_directory_uri() . '/js/material.theme.js', array(), '1.0', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

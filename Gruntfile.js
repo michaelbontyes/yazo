@@ -21,7 +21,7 @@ module.exports = function(grunt){
         sass: {
             dist: {
                 files: {
-                    'css/materialize.css' : 'materialize/sass/materialize.scss'
+                    'css/materialize.theme.css' : 'materialize/sass/materialize.scss'
                 }
             }
         },

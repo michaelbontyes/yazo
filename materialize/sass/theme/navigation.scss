@@ -1,26 +1,4 @@
 /* Small menu. */
 .menu-toggle {
-	display: none;
-}
- 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
- 
-	.main-navigation ul {
-		display: none;
-	}
-}
- 
- 
-.m-container nav {
-  color: #fff;
-  background-color: transparent;
-  width: 100%;
-  height: 56px;
-  line-height: 56px;
-  overflow: hidden;
-  box-shadow: 0 0 0;
+
 }
